@@ -1,0 +1,99 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #0f172a, #1e3a8a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculadora{
+    background-color: #1f2937;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#visor{
+    width: 100%;
+    height: 70px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 28px;
+    text-align: right;
+    background-color: #f3f4f6;
+}
+
+.botoes{
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 12px;
+}
+
+button{
+    height: 70px;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+/* Botões numéricos */
+button{
+    background-color: #e5e7eb;
+}
+
+/* Operadores */
+.operador{
+    background-color: #f59e0b;
+    color: white;
+}
+
+/* Botão igual */
+.resultado{
+    background-color: #10b981;
+    color: white;
+}
+
+/* Botão limpar */
+.limpar{
+    background-color: #ef4444;
+    color: white;
+}
+
+@media (max-width: 500px){
+
+    .botoes{
+        grid-template-columns: repeat(4, 65px);
+    }
+
+    button{
+        height: 60px;
+        font-size: 18px;
+    }
+
+}
